@@ -29,7 +29,10 @@ export function TextRevealRoot({ children }: { children: React.ReactNode }) {
     const root = rootRef.current;
     if (!root) return;
 
-    const elements = root.querySelectorAll<HTMLElement>(TEXT_SELECTOR);
+    const all = root.querySelectorAll<HTMLElement>(TEXT_SELECTOR);
+    const elements = Array.from(all).filter(
+      (el) => !el.closest('.hero-carousel')
+    );
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

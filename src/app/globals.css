@@ -260,10 +260,15 @@ body [onclick] {
 .text-reveal-root .section-image-contour-blanc__checklist li,
 .text-reveal-root .section-image-contour-blanc__link,
 .text-reveal-root .page-cta-bar__link,
-.text-reveal-root .footer__col h3,
-.text-reveal-root .footer__col a,
+.text-reveal-root .site-footer__tagline,
+.text-reveal-root .site-footer__col-title,
+.text-reveal-root .site-footer__link,
+.text-reveal-root .site-footer__copy,
+.text-reveal-root .section-entraide__quote,
 .text-reveal-root .newsletter-section__title,
-.text-reveal-root .newsletter-section__text {
+.text-reveal-root .newsletter-section__text,
+.text-reveal-root .newsletter-pro__title,
+.text-reveal-root .newsletter-pro__lead {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.55s ease-out, transform 0.55s ease-out;
@@ -300,12 +305,25 @@ body [onclick] {
 .text-reveal-root .section-image-contour-blanc__checklist li.text-reveal-visible,
 .text-reveal-root .section-image-contour-blanc__link.text-reveal-visible,
 .text-reveal-root .page-cta-bar__link.text-reveal-visible,
-.text-reveal-root .footer__col h3.text-reveal-visible,
-.text-reveal-root .footer__col a.text-reveal-visible,
+.text-reveal-root .site-footer__tagline.text-reveal-visible,
+.text-reveal-root .site-footer__col-title.text-reveal-visible,
+.text-reveal-root .site-footer__link.text-reveal-visible,
+.text-reveal-root .site-footer__copy.text-reveal-visible,
+.text-reveal-root .section-entraide__quote.text-reveal-visible,
 .text-reveal-root .newsletter-section__title.text-reveal-visible,
-.text-reveal-root .newsletter-section__text.text-reveal-visible {
+.text-reveal-root .newsletter-section__text.text-reveal-visible,
+.text-reveal-root .newsletter-pro__title.text-reveal-visible,
+.text-reveal-root .newsletter-pro__lead.text-reveal-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Ne pas animer les textes du hero (déjà animés par le carousel) */
+.text-reveal-root .hero-carousel .hero-carousel__title,
+.text-reveal-root .hero-carousel .hero-carousel__text {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 /* Animation d'apparition de l'entête au chargement */
