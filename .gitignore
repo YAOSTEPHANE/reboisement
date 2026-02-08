@@ -1,0 +1,16 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+# build
+.next
+out
+# misc
+.DS_Store
+*.pem
+# debug
+npm-debug.log*
+# env
+.env*.local
+# Données des formulaires (contact, newsletter, dons) — à ne pas versionner
+data/
