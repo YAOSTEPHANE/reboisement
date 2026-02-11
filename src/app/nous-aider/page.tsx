@@ -8,26 +8,26 @@ export const metadata: Metadata = {
   description: "Partenariats, bénévolat, dons — comment soutenir la Fondation YES.",
 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80";
+const HERO_IMG = "/images/yesfondation-org/Design-sans-titre-18.jpg";
 
 const CARDS = [
   {
     href: "/nous-aider/faire-un-don",
     title: "Faire un don",
     text: "Soutenez nos projets par un don (virement, Mobile Money). Chaque don compte et peut ouvrir droit à une réduction d'impôt.",
-    image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/Untitled-design-7.jpg",
   },
   {
     href: "/nous-aider/etre-benevole",
     title: "Être bénévole",
     text: "Donnez de votre temps : sensibilisation, terrain, formation, administration. Missions adaptées à votre disponibilité.",
-    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/Untitled-design-7.jpg",
   },
   {
     href: "/nous-aider/partenariat",
     title: "Partenariat",
     text: "Entreprises et institutions : mécénat, sponsoring, mise à disposition de compétences ou opérations communes.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/Untitled-design-8.jpg",
   },
 ];
 

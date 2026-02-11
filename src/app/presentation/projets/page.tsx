@@ -4,38 +4,39 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 
 export const metadata: Metadata = {
   title: "Projets - Fondation YES",
   description: "Nos programmes et initiatives sur le terrain.",
 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1600&q=80";
+const HERO_IMG = "/images/yesfondation-org/Design-sans-titre-18.jpg";
 
 const PROJETS = [
   {
     titre: "Reboisement et restauration des forêts",
     desc: "Plantation d'arbres, protection des bassins versants et reconstitution des écosystèmes forestiers.",
     detail: "Nous menons des campagnes de reboisement avec des espèces adaptées aux contextes locaux, en associant les communautés à la plantation et au suivi. Les zones ciblées incluent les forêts dégradées et les périmètres de protection des cours d'eau.",
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/Design-sans-titre-18.jpg",
   },
   {
     titre: "Éducation et sensibilisation",
     desc: "Programmes de formation et de sensibilisation des populations à la protection de l'environnement.",
     detail: "Sessions en milieu scolaire, formations pour les acteurs locaux et campagnes de sensibilisation permettent de diffuser les bonnes pratiques et de renforcer la conscience environnementale.",
-    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/Untitled-design-7.jpg",
   },
   {
     titre: "Lutte contre la déforestation",
     desc: "Actions de prévention, surveillance et alternatives durables pour réduire la déforestation.",
     detail: "Nous travaillons sur la prévention des feux, le soutien à des activités alternatives (agroforesterie, apiculture) et le dialogue avec les usagers des forêts pour des pratiques plus durables.",
-    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/Untitled-design-8.jpg",
   },
   {
     titre: "Accompagnement des communautés",
     desc: "Soutien aux communautés pour une gestion durable des ressources naturelles.",
     detail: "Accompagnement technique, renforcement des comités locaux et appui à des initiatives génératrices de revenus compatibles avec la préservation des écosystèmes.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/H5C4207-scaled.jpg",
   },
 ];
 
@@ -93,6 +94,7 @@ export default function ProjetsPage() {
       </main>
       <SectionDecouvrirAussi excludeHref="/presentation/projets" />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

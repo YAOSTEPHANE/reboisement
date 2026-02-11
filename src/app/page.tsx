@@ -14,10 +14,11 @@ const SectionEquipeBenevoles = dynamic(() => import("@/components/SectionEquipeB
 const SectionClients = dynamic(() => import("@/components/SectionClients").then((m) => ({ default: m.SectionClients })));
 const SectionImagesIncurvees = dynamic(() => import("@/components/SectionImagesIncurvees").then((m) => ({ default: m.SectionImagesIncurvees })));
 const NewsletterSection = dynamic(() => import("@/components/NewsletterSection").then((m) => ({ default: m.NewsletterSection })));
+const SectionApresNewsletter = dynamic(() => import("@/components/SectionApresNewsletter").then((m) => ({ default: m.SectionApresNewsletter })));
 
 export const metadata: Metadata = {
   title: "Accueil",
-  description: "Fondation YES — Préservation des forêts, reboisement, accompagnement des communautés. Découvrez nos actions et comment nous soutenir.",
+  description: "Préservation des forêts, reboisement et accompagnement des communautés. Découvrez nos actions et soutenez-nous.",
 };
 
 export default function HomePage() {
@@ -41,16 +42,16 @@ export default function HomePage() {
         <div className="section-image-contour-blanc__inner">
           <div className="section-image-contour-blanc__wrap">
             <Image
-              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=600&fit=crop&q=80"
-              alt="Nature"
+              src="/images/yesfondation-org/Design-sans-titre-18.jpg"
+              alt="Fondation YeS"
               width={280}
               height={420}
               className="section-image-contour-blanc__img section-image-contour-blanc__img--vertical"
               sizes="280px"
             />
             <Image
-              src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&h=400&fit=crop&q=80"
-              alt="Nature et paix"
+              src="/images/yesfondation-org/Design-sans-titre-18.jpg"
+              alt="Actions Fondation YeS"
               width={220}
               height={220}
               className="section-image-contour-blanc__img section-image-contour-blanc__img--carre"
@@ -64,8 +65,7 @@ export default function HomePage() {
               et faire la différence
             </h2>
             <p className="section-image-contour-blanc__intro">
-              La charité est l&apos;acte volontaire d&apos;apporter de l&apos;aide, généralement sous forme d&apos;argent, de temps ou de ressources, à ceux qui en ont besoin.<br />
-              Les organisations caritatives visent à résoudre les défis sociaux, environnementaux et économiques en s&apos;attaquant à des problèmes tels que la pauvreté,
+              Votre don finance le reboisement, l&apos;éducation à l&apos;environnement et le soutien aux communautés. Chaque euro compte.
             </p>
             <div className="section-image-contour-blanc__links">
               <div className="section-image-contour-blanc__mission-block">
@@ -82,28 +82,28 @@ export default function HomePage() {
             </div>
             <hr className="section-image-contour-blanc__divider" />
             <ul className="section-image-contour-blanc__checklist">
-              <li>Nous aidons les entreprises à développer une responsabilité sociale forte.</li>
-              <li>Aide au financement de 3 265 projets en faveur des entreprises pauvres.</li>
-              <li>Services techniques dédiés.</li>
+              <li>Reboisement et préservation des forêts.</li>
+              <li>Sensibilisation et éducation à l&apos;environnement.</li>
+              <li>Accompagnement des communautés locales.</li>
             </ul>
             <div className="section-image-contour-blanc__charts">
               <div className="section-image-contour-blanc__chart">
                 <div className="section-image-contour-blanc__circle-wrap">
-                  <svg className="section-image-contour-blanc__circle" viewBox="0 0 36 36">
+                  <svg className="section-image-contour-blanc__circle" viewBox="0 0 36 36" aria-hidden>
                     <path className="section-image-contour-blanc__circle-bg" d="M18 2.5 a 15.5 15.5 0 0 1 0 31 a 15.5 15.5 0 0 1 0 -31" />
                     <path className="section-image-contour-blanc__circle-fill" strokeDasharray="73 97" d="M18 2.5 a 15.5 15.5 0 0 1 0 31 a 15.5 15.5 0 0 1 0 -31" />
+                    <text x="18" y="18" textAnchor="middle" dominantBaseline="central" className="section-image-contour-blanc__circle-value-svg" transform="rotate(90 18 18)">75%</text>
                   </svg>
-                  <span className="section-image-contour-blanc__circle-value">75%</span>
                 </div>
                 <p className="section-image-contour-blanc__chart-title">Traitement Aide</p>
               </div>
               <div className="section-image-contour-blanc__chart">
                 <div className="section-image-contour-blanc__circle-wrap">
-                  <svg className="section-image-contour-blanc__circle" viewBox="0 0 36 36">
+                  <svg className="section-image-contour-blanc__circle" viewBox="0 0 36 36" aria-hidden>
                     <path className="section-image-contour-blanc__circle-bg" d="M18 2.5 a 15.5 15.5 0 0 1 0 31 a 15.5 15.5 0 0 1 0 -31" />
                     <path className="section-image-contour-blanc__circle-fill" strokeDasharray="87.5 97" d="M18 2.5 a 15.5 15.5 0 0 1 0 31 a 15.5 15.5 0 0 1 0 -31" />
+                    <text x="18" y="18" textAnchor="middle" dominantBaseline="central" className="section-image-contour-blanc__circle-value-svg" transform="rotate(90 18 18)">90%</text>
                   </svg>
-                  <span className="section-image-contour-blanc__circle-value">90%</span>
                 </div>
                 <p className="section-image-contour-blanc__chart-title">Montant maximal de fonds collectés</p>
               </div>
@@ -132,12 +132,12 @@ export default function HomePage() {
       </section>
       <section className="section-actualites-titre" aria-label="Actualités">
         <h2 className="section-actualites-titre__heading">
-          Nos dernières <span className="section-actualites-titre__highlight">actualités</span> et articles<br />
-          que vous aimez
+          Nos dernières <span className="section-actualites-titre__highlight">actualités</span>
         </h2>
       </section>
       <SectionActualitesCartes />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

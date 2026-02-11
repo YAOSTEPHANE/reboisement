@@ -8,11 +8,10 @@ export function SectionPresentation() {
           Présentation
         </h2>
         <p className="section-presentation__text">
-          Découvrez la Fondation YES, nos missions, nos projets et notre équipe engagée 
-          pour la préservation des forêts et l&apos;accompagnement des communautés.
+          Missions, projets et équipe au service des forêts et des communautés.
         </p>
         <Link href="/presentation" className="section-presentation__link" prefetch>
-          Découvrir notre présentation
+          Découvrir
         </Link>
       </div>
     </section>

@@ -4,27 +4,28 @@ import { PageHero } from "@/components/PageHero";
 import { GalerieGrid } from "./GalerieGrid";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 
 export const metadata: Metadata = {
   title: "Galerie - Fondation YES",
   description: "Photos et visuels des actions de la Fondation YES.",
 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=80";
+const HERO_IMG = "/images/yesfondation-org/Design-sans-titre-18.jpg";
 
 const IMAGES = [
-  { src: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=85", alt: "Forêt" },
-  { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=85", alt: "Nature" },
-  { src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=85", alt: "Paysage" },
-  { src: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=85", alt: "Action collective" },
-  { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=85", alt: "Formation" },
-  { src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&q=85", alt: "Équipe" },
-  { src: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=85", alt: "Plantation" },
-  { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=85", alt: "Communauté" },
-  { src: "https://images.unsplash.com/photo-1511497584788-876760111969?w=800&q=85", alt: "Pépinière" },
-  { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=85", alt: "Nature préservée" },
-  { src: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=85", alt: "Reboisement" },
-  { src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=85", alt: "Bénévolat" },
+  { src: "/images/yesfondation-org/Design-sans-titre-18.jpg", alt: "Galerie YeS" },
+  { src: "/images/yesfondation-org/Untitled-design-7.jpg", alt: "Galerie YeS" },
+  { src: "/images/yesfondation-org/Untitled-design-8.jpg", alt: "Galerie YeS" },
+  { src: "/images/yesfondation-org/H5C4207-scaled.jpg", alt: "Galerie YeS" },
+  { src: "/images/yesfondation-org/colombe-2-540x600.jpg", alt: "Galerie YeS" },
+  { src: "/images/yesfondation-org/ath-540x600.jpg", alt: "Galerie YeS" },
+  { src: "/images/yesfondation-org/Design-sans-titre-18.jpg", alt: "Reboisement" },
+  { src: "/images/yesfondation-org/about-us_03-02.png", alt: "Fondation YeS" },
+  { src: "/images/yesfondation-org/H5C4207-scaled.jpg", alt: "Actions terrain" },
+  { src: "/images/yesfondation-org/H5C4207-scaled.jpg", alt: "Actions terrain" },
+  { src: "/images/yesfondation-org/Untitled-design-7.jpg", alt: "Fondation YeS" },
+  { src: "/images/yesfondation-org/Untitled-design-8.jpg", alt: "Fondation YeS" },
 ];
 
 export default function GaleriePage() {
@@ -62,6 +63,7 @@ export default function GaleriePage() {
 
       <SectionDecouvrirAussi />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

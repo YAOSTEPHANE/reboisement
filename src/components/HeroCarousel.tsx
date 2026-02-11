@@ -15,19 +15,19 @@ const DEFAULT_SLIDES: Slide[] = [
     image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80',
     imageAlt: 'Forêt',
     title: 'Protéger nos forêts',
-    text: 'La Fondation YES œuvre pour la préservation et la restauration des écosystèmes forestiers.',
+    text: 'Préservation et restauration des écosystèmes forestiers.',
   },
   {
     image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
     imageAlt: 'Nature',
     title: 'Un engagement durable',
-    text: 'Ensemble, créons un monde plus vert et plus respectueux de l\'environnement.',
+    text: 'Un monde plus vert, ensemble.',
   },
   {
     image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80',
     imageAlt: 'Paysage',
     title: 'Reboisement et biodiversité',
-    text: 'Chaque arbre planté compte pour les générations futures.',
+    text: 'Chaque arbre planté compte pour demain.',
   },
 ];
 
@@ -82,7 +82,8 @@ export function HeroCarousel({ slides = DEFAULT_SLIDES }: { slides?: Slide[] }) 
                 fill
                 sizes="100vw"
                 priority={i === 0}
-                loading={i === 0 ? undefined : 'lazy'}
+                fetchPriority={i === 0 ? "high" : undefined}
+                loading={i === 0 ? undefined : "lazy"}
                 className="hero-carousel__image"
               />
               <span className="hero-carousel__overlay" aria-hidden />

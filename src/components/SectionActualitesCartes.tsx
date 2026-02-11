@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { ACTUALITES } from "@/app/actualites/data";
 
+/* Images de reboisement pour les cartes actualités */
 const IMAGES_ACTUALITES = [
-  "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&h=280&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=280&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400&h=280&fit=crop&q=80",
+  "/images/yesfondation-org/Design-sans-titre-18.jpg",
+  "/images/yesfondation-org/Design-sans-titre-18.jpg",
+  "/images/yesfondation-org/H5C4207-scaled.jpg",
 ];
 
 const MOIS: Record<string, string> = {

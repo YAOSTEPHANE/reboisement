@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { PageHero } from "@/components/PageHero";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 import { RechercheClient } from "./RechercheClient";
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   description: "Recherchez une page du site Fondation YES.",
 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80";
+const HERO_IMG = "/images/yesfondation-org/Design-sans-titre-18.jpg";
 
 export default function RecherchePage() {
   return (
@@ -31,6 +32,7 @@ export default function RecherchePage() {
       </Suspense>
       <SectionDecouvrirAussi />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

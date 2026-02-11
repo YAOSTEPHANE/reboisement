@@ -4,13 +4,14 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 
 export const metadata: Metadata = {
   title: "Qui sommes-nous - Fondation YES",
   description: "Notre mission, nos valeurs et notre vision pour un monde plus vert.",
 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600&q=80";
+const HERO_IMG = "/images/yesfondation-org/about-us_03-02.png";
 
 const VALEURS = [
   {
@@ -80,7 +81,7 @@ export default function QuiSommesNousPage() {
           <div className="page-split">
             <div className="page-split__media">
               <Image
-                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=450&fit=crop&q=85"
+                src="/images/yesfondation-org/about-us_03-02.png"
                 alt="Forêt et reboisement"
                 width={600}
                 height={450}
@@ -131,6 +132,7 @@ export default function QuiSommesNousPage() {
       </main>
       <SectionDecouvrirAussi excludeHref="/presentation/qui-sommes-nous" />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

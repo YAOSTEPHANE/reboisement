@@ -5,12 +5,12 @@ import Image from "next/image";
 import { Tilt3D } from "./Tilt3D";
 
 const IMAGES = [
-  { src: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=500&h=350&fit=crop&q=85", alt: "Forêt et nature" },
-  { src: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500&h=350&fit=crop&q=85", alt: "Reboisement" },
-  { src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=500&h=350&fit=crop&q=85", alt: "Sensibilisation" },
-  { src: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=500&h=350&fit=crop&q=85", alt: "Paysage forestier" },
-  { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&h=350&fit=crop&q=85", alt: "Équipe et communauté" },
-  { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=350&fit=crop&q=85", alt: "Nature préservée" },
+  { src: "/images/yesfondation-org/Design-sans-titre-18.jpg", alt: "Fondation YeS" },
+  { src: "/images/yesfondation-org/Untitled-design-7.jpg", alt: "Reboisement" },
+  { src: "/images/yesfondation-org/Untitled-design-8.jpg", alt: "Sensibilisation" },
+  { src: "/images/yesfondation-org/H5C4207-scaled.jpg", alt: "Paysage forestier" },
+  { src: "/images/yesfondation-org/colombe-2-540x600.jpg", alt: "Équipe et communauté" },
+  { src: "/images/yesfondation-org/ath-540x600.jpg", alt: "Nature préservée" },
 ];
 
 export function SectionEnImages() {

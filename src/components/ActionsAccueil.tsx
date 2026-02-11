@@ -6,7 +6,7 @@ const ACTIONS = [
     title: "Reboisement",
     description: "Planter des arbres pour restaurer les forêts et préserver la biodiversité.",
     href: "/presentation/nos-actions",
-    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&q=80",
+    image: "/images/yesfondation-org/Design-sans-titre-18.jpg",
     imageAlt: "Plantation d'arbres",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -20,7 +20,7 @@ const ACTIONS = [
     title: "Être bénévole",
     description: "Rejoignez-nous et donnez de votre temps pour agir en faveur de l'environnement.",
     href: "/nous-aider/etre-benevole",
-    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&q=80",
+    image: "/images/yesfondation-org/Design-sans-titre-18.jpg",
     imageAlt: "Bénévoles en action",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -35,7 +35,7 @@ const ACTIONS = [
     title: "Éduquer la population",
     description: "Sensibiliser et former les citoyens à la protection de l'environnement.",
     href: "/presentation/nos-actions",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&q=80",
+    image: "/images/yesfondation-org/Untitled-design-7.jpg",
     imageAlt: "Sensibilisation et formation",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -50,7 +50,7 @@ const ACTIONS = [
     title: "La déforestation",
     description: "Lutter contre la déforestation et préserver les écosystèmes forestiers.",
     href: "/presentation/nos-actions",
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&q=80",
+    image: "/images/yesfondation-org/Untitled-design-8.jpg",
     imageAlt: "Protection des forêts",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -63,7 +63,7 @@ const ACTIONS = [
     title: "L'Education",
     description: "Former et sensibiliser les citoyens à la protection de l'environnement et aux bonnes pratiques.",
     href: "/presentation/nos-actions",
-    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&q=80",
+    image: "/images/yesfondation-org/H5C4207-scaled.jpg",
     imageAlt: "Formation et sensibilisation",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -78,7 +78,7 @@ const ACTIONS = [
     title: "L'Assistance",
     description: "Accompagner les communautés et les projets pour une gestion durable des ressources.",
     href: "/nous-aider/partenariat",
-    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&q=80",
+    image: "/images/yesfondation-org/Design-sans-titre-18.jpg",
     imageAlt: "Accompagnement des communautés",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>

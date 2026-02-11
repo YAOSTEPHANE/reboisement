@@ -4,13 +4,14 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 
 export const metadata: Metadata = {
   title: "Nos actions - Fondation YES",
   description: "Ce que nous faisons concrètement au quotidien.",
 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1600&q=80";
+const HERO_IMG = "/images/yesfondation-org/Design-sans-titre-18.jpg";
 
 const PILIERS = [
   {
@@ -64,9 +65,9 @@ export default function NosActionsPage() {
         </section>
 
         <div className="page-images-strip" aria-hidden>
-          <Image src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=280&fit=crop&q=85" alt="" width={400} height={280} className="page-images-strip__img" />
-          <Image src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&h=280&fit=crop&q=85" alt="" width={400} height={280} className="page-images-strip__img" />
-          <Image src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400&h=280&fit=crop&q=85" alt="" width={400} height={280} className="page-images-strip__img" />
+          <Image src="/images/yesfondation-org/Design-sans-titre-18.jpg" alt="" width={400} height={280} className="page-images-strip__img" />
+          <Image src="/images/yesfondation-org/Untitled-design-7.jpg" alt="" width={400} height={280} className="page-images-strip__img" />
+          <Image src="/images/yesfondation-org/Untitled-design-8.jpg" alt="" width={400} height={280} className="page-images-strip__img" />
         </div>
 
         <section className="page-block" aria-labelledby="terrain-title">
@@ -99,6 +100,7 @@ export default function NosActionsPage() {
       </main>
       <SectionDecouvrirAussi excludeHref="/presentation/nos-actions" />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

@@ -21,7 +21,7 @@ async function readJsonFile<T>(filePath: string): Promise<T[]> {
   }
 }
 
-async function appendToFile(filePath: string, entry: unknown) {
+async function appendToFile(filePath: string, entry: Record<string, unknown>) {
   await ensureDir(path.dirname(filePath));
   const items = await readJsonFile(filePath);
   items.push({ ...entry, id: `${Date.now()}-${Math.random().toString(36).slice(2, 9)}` });

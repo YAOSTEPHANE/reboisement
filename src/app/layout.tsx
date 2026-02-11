@@ -5,20 +5,16 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { HeaderScrollEffect } from "@/components/HeaderScrollEffect";
 import { ScrollProvider } from "@/components/ScrollContext";
 import { BarreVerte } from "@/components/BarreVerte";
-import dynamic from "next/dynamic";
 import { Footer } from "@/components/Footer";
-import { BackgroundDecorations } from "@/components/BackgroundDecorations";
 import { TextRevealRoot } from "@/components/TextRevealRoot";
+import { LayoutClientParts } from "@/components/LayoutClientParts";
 import "./globals.css";
-
-const CustomCursor = dynamic(() => import("@/components/CustomCursor").then((m) => ({ default: m.CustomCursor })), {
-  ssr: false,
-});
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
+  preload: true,
 });
 
 const NAV_LINKS = [
@@ -46,20 +42,31 @@ const NAV_LINKS = [
   { href: "/contact", label: "Contact" },
 ];
 
+const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://fondation-yes.example.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Fondation YES",
     template: "%s | Fondation YES",
   },
-  description: "Fondation YES œuvre pour la préservation des forêts, l'accompagnement des communautés et la lutte contre la déforestation. Reboisement, éducation, partenariats.",
+  description: "Fondation YES : préservation des forêts, reboisement et accompagnement des communautés. Dons, bénévolat, partenariats.",
+  keywords: ["Fondation YES", "reboisement", "forêts", "environnement", "biodiversité", "Côte d'Ivoire"],
   icons: { icon: "/icon.svg" },
   openGraph: {
     type: "website",
     locale: "fr_FR",
     siteName: "Fondation YES",
+    url: siteUrl,
+    images: [{ url: "/images/yesfondation-org/Design-sans-titre-18.jpg", width: 1200, height: 630, alt: "Fondation YES" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fondation YES",
+    description: "Préservation des forêts, reboisement et accompagnement des communautés.",
   },
   robots: { index: true, follow: true },
+  alternates: { canonical: siteUrl },
 };
 
 export const viewport = {
@@ -74,7 +81,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={plusJakarta.variable}>
       <body className="antialiased min-h-screen font-sans" style={{ margin: 0, background: "var(--color-bg, #fafaf9)" }}>
-        <BackgroundDecorations />
+        <LayoutClientParts />
         <a href="#contenu-principal" className="skip-link">
           Aller au contenu
         </a>
@@ -225,7 +232,6 @@ export default function RootLayout({
           </div>
           <Footer />
         </TextRevealRoot>
-        <CustomCursor />
       </body>
     </html>
   );

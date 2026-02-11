@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 
 export const metadata: Metadata = {
   title: "Don reçu - Fondation YES",
@@ -55,6 +56,7 @@ export default function DonSuccessPage() {
 
       <SectionDecouvrirAussi />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

@@ -10,24 +10,9 @@ export type SlideEntre = {
 };
 
 const SLIDES: SlideEntre[] = [
-  {
-    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
-    imageAlt: 'Forêt',
-    title: 'Nos actions sur le terrain',
-    text: 'Des projets concrets pour la préservation des forêts et la sensibilisation des populations.',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
-    imageAlt: 'Nature',
-    title: 'Biodiversité et écosystèmes',
-    text: 'Protéger la faune et la flore pour les générations futures.',
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80',
-    imageAlt: 'Reboisement',
-    title: 'Planter pour demain',
-    text: 'Chaque arbre compte. Rejoignez notre engagement pour un monde plus vert.',
-  },
+  { image: "/images/yesfondation-org/Design-sans-titre-18.jpg", imageAlt: "Fondation YeS", title: "Nos actions sur le terrain", text: "Des projets concrets pour la préservation des forêts et la sensibilisation des populations." },
+  { image: "/images/yesfondation-org/Design-sans-titre-18.jpg", imageAlt: "Fondation YeS", title: "Biodiversité et écosystèmes", text: "Protéger la faune et la flore pour les générations futures." },
+  { image: "/images/yesfondation-org/Design-sans-titre-18.jpg", imageAlt: "Reboisement", title: "Planter pour demain", text: "Chaque arbre compte. Rejoignez notre engagement pour un monde plus vert." },
 ];
 
 const AUTO_PLAY_MS = 4500;

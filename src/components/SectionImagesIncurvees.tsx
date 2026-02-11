@@ -3,12 +3,12 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const IMAGES = [
-  { src: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=500&h=350&fit=crop&q=80", alt: "Forêt", caption: "Ensemble, plantons des arbres pour préserver nos forêts et la biodiversité." },
-  { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=350&fit=crop&q=80", alt: "Nature", caption: "Chaque geste compte : la nature nous rend tous les services qu’on lui offre." },
-  { src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&h=350&fit=crop&q=80", alt: "Paysage", caption: "Le reboisement redonne vie aux paysages et lutte contre l’érosion." },
-  { src: "https://images.unsplash.com/photo-1511497584788-876760111969?w=500&h=350&fit=crop&q=80", alt: "Arbres", caption: "Les arbres sont nos meilleurs alliés pour le climat et la qualité de l’air." },
-  { src: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=500&h=350&fit=crop&q=80", alt: "Montagne", caption: "Protéger les forêts de montagne, c’est protéger l’eau et les écosystèmes." },
-  { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=350&fit=crop&q=80", alt: "Environnement", caption: "Agir pour l’environnement aujourd’hui, c’est préparer un avenir durable pour tous." },
+  { src: "/images/yesfondation-org/Design-sans-titre-18.jpg", alt: "Fondation YeS", caption: "Ensemble, plantons des arbres pour préserver nos forêts et la biodiversité." },
+  { src: "/images/yesfondation-org/Untitled-design-7.jpg", alt: "Fondation YeS", caption: "Chaque geste compte : la nature nous rend tous les services qu’on lui offre." },
+  { src: "/images/yesfondation-org/Untitled-design-8.jpg", alt: "Fondation YeS", caption: "Le reboisement redonne vie aux paysages et lutte contre l’érosion." },
+  { src: "/images/yesfondation-org/H5C4207-scaled.jpg", alt: "Fondation YeS", caption: "Les arbres sont nos meilleurs alliés pour le climat et la qualité de l’air." },
+  { src: "/images/yesfondation-org/colombe-2-540x600.jpg", alt: "Fondation YeS", caption: "Protéger les forêts de montagne, c’est protéger l’eau et les écosystèmes." },
+  { src: "/images/yesfondation-org/ath-540x600.jpg", alt: "Fondation YeS", caption: "Agir pour l’environnement aujourd’hui, c’est préparer un avenir durable pour tous." },
 ];
 
 /** Piste infinie : [dernier, ...tous, premier, 2e] pour next après dernier → reset fluide (9 slides) */

@@ -4,10 +4,10 @@ import { useState } from "react";
 import { subscribeNewsletter, type NewsletterState } from "@/app/actions/newsletter";
 
 const BENEFITS = [
-  "Inspections régulières et retours d'information",
-  "Actualités et rapports d'impact en avant-première",
-  "Conseils et bonnes pratiques pour l'environnement",
-  "Invitations aux événements et webinaires",
+  "Suivi et retours d'information",
+  "Rapports d'impact en avant-première",
+  "Bonnes pratiques environnement",
+  "Invitations événements et webinaires",
 ];
 
 export function NewsletterSection() {
@@ -44,7 +44,7 @@ export function NewsletterSection() {
             </div>
             <h2 className="newsletter-pro__title">Restez informé</h2>
             <p className="newsletter-pro__lead">
-              Abonnez-vous à notre newsletter et recevez nos actualités, rapports et actions directement dans votre boîte mail.
+              Actualités, rapports d&apos;impact et actions : recevez-les par email.
             </p>
             <ul className="newsletter-pro__benefits" role="list">
               {BENEFITS.map((text, i) => (

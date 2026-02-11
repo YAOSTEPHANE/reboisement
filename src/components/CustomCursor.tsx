@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 
-export function CustomCursor() {
+function CustomCursor() {
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
   const bigRef = useRef<HTMLDivElement>(null);
@@ -88,3 +88,6 @@ export function CustomCursor() {
     </>
   );
 }
+
+export { CustomCursor };
+export default CustomCursor;

@@ -3,36 +3,12 @@
 import { useState, useEffect, useCallback } from "react";
 
 const AIDEZ_LES_ITEMS = [
-  {
-    src: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=300&h=400&fit=crop&q=80",
-    title: "Solidarité",
-    text: "Soutenez les communautés dans le besoin.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=300&h=400&fit=crop&q=80",
-    title: "Entraide",
-    text: "Chaque don compte pour améliorer leur quotidien.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=300&h=400&fit=crop&q=80",
-    title: "Partage",
-    text: "Partagez et aidez ceux qui en ont le plus besoin.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300&h=400&fit=crop&q=80",
-    title: "Don",
-    text: "Faites un geste concret pour les plus démunis.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=300&h=400&fit=crop&q=80",
-    title: "Bénévolat",
-    text: "Donnez de votre temps pour une cause juste.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=300&h=400&fit=crop&q=80",
-    title: "Espoir",
-    text: "Ensemble, créons un avenir meilleur pour tous.",
-  },
+  { src: "/images/yesfondation-org/Design-sans-titre-18.jpg", title: "Solidarité", text: "Soutenez les communautés dans le besoin." },
+  { src: "/images/yesfondation-org/Untitled-design-7.jpg", title: "Entraide", text: "Chaque don compte pour améliorer leur quotidien." },
+  { src: "/images/yesfondation-org/Untitled-design-8.jpg", title: "Partage", text: "Partagez et aidez ceux qui en ont le plus besoin." },
+  { src: "/images/yesfondation-org/H5C4207-scaled.jpg", title: "Don", text: "Faites un geste concret pour les plus démunis." },
+  { src: "/images/yesfondation-org/colombe-2-540x600.jpg", title: "Bénévolat", text: "Donnez de votre temps pour une cause juste." },
+  { src: "/images/yesfondation-org/ath-540x600.jpg", title: "Espoir", text: "Ensemble, créons un avenir meilleur pour tous." },
 ];
 
 const AUTO_PLAY_MS = 4000;

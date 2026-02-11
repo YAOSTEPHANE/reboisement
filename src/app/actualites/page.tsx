@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 import { ACTUALITES } from "./data";
 import { ActualiteCard } from "./ActualiteCard";
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   description: "Dernières nouvelles et événements de la Fondation YES : reboisement, partenariats, bilans.",
 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1600&q=80";
+const HERO_IMG = "/images/yesfondation-org/H5C4207-scaled.jpg";
 
 export default function ActualitesPage() {
   return (
@@ -51,6 +52,7 @@ export default function ActualitesPage() {
 
       <SectionDecouvrirAussi />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

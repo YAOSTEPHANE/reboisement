@@ -4,38 +4,39 @@ import { PageHero } from "@/components/PageHero";
 import { CardModernWithTilt } from "@/components/CardModernWithTilt";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 
 export const metadata: Metadata = {
   title: "Présentation",
   description: "Découvrez la Fondation YES : missions, projets, actions et équipe.",
 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=80";
+const HERO_IMG = "/images/yesfondation-org/Untitled-design-8.jpg";
 
 const CARDS = [
   {
     href: "/presentation/qui-sommes-nous",
     title: "Qui sommes-nous",
     text: "Notre mission, nos valeurs et notre vision pour un monde plus vert.",
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/Design-sans-titre-18.jpg",
   },
   {
     href: "/presentation/projets",
     title: "Projets",
     text: "Programmes et initiatives : reboisement, éducation, communautés.",
-    image: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/Untitled-design-7.jpg",
   },
   {
     href: "/presentation/nos-actions",
     title: "Nos actions",
     text: "Ce que nous faisons au quotidien : prévention, intervention, renforcement.",
-    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/Untitled-design-8.jpg",
   },
   {
     href: "/presentation/equipe",
     title: "Équipe",
     text: "Gouvernance, terrain, partenaires et bénévoles qui font vivre la Fondation.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=380&fit=crop&q=85",
+    image: "/images/yesfondation-org/H5C4207-scaled.jpg",
   },
 ];
 
@@ -77,6 +78,7 @@ export default function PresentationPage() {
 
       <SectionDecouvrirAussi />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

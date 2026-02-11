@@ -4,13 +4,27 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 
 export const metadata: Metadata = {
   title: "Équipe - Fondation YES",
   description: "Qui fait vivre la Fondation YES.",
 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1600&q=80";
+const HERO_IMG = "/images/yesfondation-org/colombe-2-540x600.jpg";
+
+const EQUIPE_IMAGES = [
+  { src: "/images/yesfondation-org/ath-540x600.jpg", label: "Coordinateur terrain", size: "tall" as const },
+  { src: "/images/yesfondation-org/colombe-2-540x600.jpg", label: "Sensibilisation", size: "tall" as const },
+  { src: "/images/yesfondation-org/about-us_03-02.png", label: "L'équipe YeS", size: "wide" as const },
+  { src: "/images/yesfondation-org/ath-540x600.jpg", label: "Logistique", size: "default" as const },
+  { src: "/images/yesfondation-org/colombe-2-540x600.jpg", label: "Communication", size: "default" as const },
+  { src: "/images/yesfondation-org/WhatsApp-Image-2022-05-04-at-15_14_45-540x600.jpeg", label: "Reboisement", size: "tall" as const },
+  { src: "/images/yesfondation-org/WhatsApp-Image-2022-05-04-at-15_31_15-540x600.jpeg", label: "Éducation", size: "default" as const },
+  { src: "/images/yesfondation-org/about-us_03-02.png", label: "Partenariats", size: "default" as const },
+  { src: "/images/yesfondation-org/Untitled-design-7.jpg", label: "Sur le terrain", size: "wide" as const },
+  { src: "/images/yesfondation-org/H5C4207-scaled.jpg", label: "Mobilisations", size: "wide" as const },
+];
 
 const ROLES = [
   {
@@ -54,7 +68,7 @@ export default function EquipePage() {
         <div className="page-split page-split--equipe">
           <div className="page-split__media">
             <Image
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=450&fit=crop&q=85"
+              src="/images/yesfondation-org/Untitled-design-7.jpg"
               alt="Équipe et bénévoles"
               width={600}
               height={450}
@@ -66,6 +80,28 @@ export default function EquipePage() {
             l&apos;impact de nos actions et garantir la transparence et la pérennité de la fondation.
           </p>
         </div>
+
+        <section className="page-block" aria-labelledby="equipe-visages-title">
+          <h2 id="equipe-visages-title" className="page-block__title">Les visages de l&apos;équipe</h2>
+          <p className="page-p page-p--mb">
+            Découvrez en images celles et ceux qui font vivre la Fondation YeS au quotidien : bénévoles, coordinateurs et équipes terrain.
+          </p>
+          <div className="page-equipe-gallery">
+            {EQUIPE_IMAGES.map((img, i) => (
+              <div key={i} className={`page-equipe-gallery__item page-equipe-gallery__item--${img.size}`}>
+                <Image
+                  src={img.src}
+                  alt={img.label}
+                  width={img.size === "wide" ? 800 : 540}
+                  height={img.size === "tall" ? 600 : img.size === "wide" ? 400 : 500}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="page-equipe-gallery__img"
+                />
+                <span className="page-equipe-gallery__label">{img.label}</span>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <section className="page-block" aria-labelledby="organisation-title">
           <h2 id="organisation-title" className="page-block__title">Notre organisation</h2>
@@ -103,6 +139,7 @@ export default function EquipePage() {
       </main>
       <SectionDecouvrirAussi excludeHref="/presentation/equipe" />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

@@ -24,7 +24,7 @@ export function SectionEntraide() {
       <div className="section-entraide__inner">
         <div className="section-entraide__image-wrap">
           <img
-            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=900&fit=crop&q=85"
+            src="/images/yesfondation-org/H5C4207-scaled.jpg"
             alt="Entraide et solidarité"
             width={440}
             height={660}
@@ -35,7 +35,7 @@ export function SectionEntraide() {
           </div>
           <div className="section-entraide__corner-wrap">
             <img
-              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=400&fit=crop&q=85"
+              src="/images/yesfondation-org/Design-sans-titre-18.jpg"
               alt=""
               width={200}
               height={200}
@@ -44,7 +44,7 @@ export function SectionEntraide() {
             />
           </div>
           <img
-            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&h=400&fit=crop&q=85"
+            src="/images/yesfondation-org/Untitled-design-7.jpg"
             alt=""
             width={200}
             height={200}

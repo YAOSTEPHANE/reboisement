@@ -4,24 +4,15 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const TROIS_IMAGES = [
-  {
-    src: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&h=500&fit=crop&q=80",
-    alt: "Forêt",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=500&fit=crop&q=80",
-    alt: "Nature",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=500&fit=crop&q=80",
-    alt: "Paysage",
-  },
+  { src: "/images/yesfondation-org/Untitled-design-8.jpg", alt: "Fondation YeS" },
+  { src: "/images/yesfondation-org/Design-sans-titre-18.jpg", alt: "Reboisement" },
+  { src: "/images/yesfondation-org/Design-sans-titre-18.jpg", alt: "Actions YeS" },
 ];
 
 const CENTER_CAROUSEL_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=500&fit=crop&q=80", alt: "Nature" },
-  { src: "https://images.unsplash.com/photo-1511497584788-876760111969?w=800&h=500&fit=crop&q=80", alt: "Forêt" },
-  { src: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&h=500&fit=crop&q=80", alt: "Paysage" },
+  { src: "/images/yesfondation-org/Design-sans-titre-18.jpg", alt: "Galerie YeS" },
+  { src: "/images/yesfondation-org/Untitled-design-7.jpg", alt: "Galerie YeS" },
+  { src: "/images/yesfondation-org/Untitled-design-8.jpg", alt: "Galerie YeS" },
 ];
 
 const CENTER_AUTO_PLAY_MS = 4000;

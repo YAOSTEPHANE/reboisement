@@ -1,32 +1,19 @@
 'use client';
 
+import { useState, useCallback } from 'react';
+
 const MEMBRES = [
-  {
-    src: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80",
-    alt: "Membre bénévole 1",
-    nom: "Jean Dupont",
-    poste: "Coordinateur terrain",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80",
-    alt: "Membre bénévole 2",
-    nom: "Marie Martin",
-    poste: "Responsable sensibilisation",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&q=80",
-    alt: "Membre bénévole 3",
-    nom: "Pierre Bernard",
-    poste: "Logistique et plantations",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&q=80",
-    alt: "Membre bénévole 4",
-    nom: "Sophie Leroy",
-    poste: "Communication et partenariats",
-  },
+  { src: "/images/yesfondation-org/ath-540x600.jpg", alt: "Membre équipe YeS", nom: "Jean Dupont", poste: "Coordinateur terrain" },
+  { src: "/images/yesfondation-org/colombe-2-540x600.jpg", alt: "Membre équipe YeS", nom: "Marie Martin", poste: "Responsable sensibilisation" },
+  { src: "/images/yesfondation-org/ath-540x600.jpg", alt: "Membre équipe YeS", nom: "Pierre Bernard", poste: "Logistique et plantations" },
+  { src: "/images/yesfondation-org/colombe-2-540x600.jpg", alt: "Membre équipe YeS", nom: "Sophie Leroy", poste: "Communication et partenariats" },
+  { src: "/images/yesfondation-org/WhatsApp-Image-2022-05-04-at-15_14_45-540x600.jpeg", alt: "Membre équipe YeS", nom: "Amara Koné", poste: "Reboisement et pépinières" },
+  { src: "/images/yesfondation-org/WhatsApp-Image-2022-05-04-at-15_31_15-540x600.jpeg", alt: "Membre équipe YeS", nom: "Fatou Traoré", poste: "Éducation et kits scolaires" },
+  { src: "/images/yesfondation-org/about-us_03-02.png", alt: "Équipe Fondation YeS", nom: "L'équipe terrain", poste: "Actions et mobilisations" },
+  { src: "/images/yesfondation-org/about-us_03-02.png", alt: "Membre équipe YeS", nom: "Koffi Yao", poste: "Partenariats et projets" },
 ];
 
+const PER_PAGE = 4;
 const RESEAUX = [
   { label: "Facebook", href: "#", icon: "facebook" },
   { label: "Instagram", href: "#", icon: "instagram" },
@@ -67,48 +54,92 @@ function IconSocial({ name }: { name: string }) {
 }
 
 export function SectionEquipeBenevoles() {
+  const totalPages = Math.ceil(MEMBRES.length / PER_PAGE);
+  const [page, setPage] = useState(0);
+  const goPrev = useCallback(() => setPage((p) => (p <= 0 ? totalPages - 1 : p - 1)), [totalPages]);
+  const goNext = useCallback(() => setPage((p) => (p >= totalPages - 1 ? 0 : p + 1)), [totalPages]);
+
   return (
     <section className="section-equipe-benevoles" aria-label="Équipe de bénévoles">
       <h2 className="section-equipe-benevoles__title">
         Rencontrez les membres de<br />
         <span className="section-equipe-benevoles__title-highlight">notre équipe</span> de bénévoles
       </h2>
-      <div className="section-equipe-benevoles__wrap">
-        {MEMBRES.map((m, i) => (
-          <div key={i} className="section-equipe-benevoles__item">
-            <div className="section-equipe-benevoles__img-wrap">
-              <img
-                src={m.src}
-                alt={m.alt}
-                width={400}
-                height={400}
-                className="section-equipe-benevoles__img"
-              />
-              <div className="section-equipe-benevoles__social">
-                <div className="section-equipe-benevoles__social-icons">
-                  {RESEAUX.map((r) => (
-                    <a
-                      key={r.icon}
-                      href={r.href}
-                      className="section-equipe-benevoles__social-link"
-                      title={r.label}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={r.label}
-                    >
-                      <IconSocial name={r.icon} />
-                    </a>
-                  ))}
+      <div className="section-equipe-benevoles__carousel">
+        <button
+          type="button"
+          className="section-equipe-benevoles__btn section-equipe-benevoles__btn--prev"
+          onClick={goPrev}
+          aria-label="Équipe précédente"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M15 18l-6-6 6-6" /></svg>
+        </button>
+        <div className="section-equipe-benevoles__viewport">
+          <div
+            className="section-equipe-benevoles__track"
+            style={{ transform: `translateX(-${page * 50}%)` }}
+          >
+            {MEMBRES.map((m, i) => (
+              <div key={i} className="section-equipe-benevoles__item">
+                <div className="section-equipe-benevoles__img-wrap">
+                  <img
+                    src={m.src}
+                    alt={m.alt}
+                    width={400}
+                    height={400}
+                    className="section-equipe-benevoles__img"
+                  />
+                  <div className="section-equipe-benevoles__social">
+                    <div className="section-equipe-benevoles__social-icons">
+                      {RESEAUX.map((r) => (
+                        <a
+                          key={r.icon}
+                          href={r.href}
+                          className="section-equipe-benevoles__social-link"
+                          title={r.label}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={r.label}
+                        >
+                          <IconSocial name={r.icon} />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="section-equipe-benevoles__info">
+                  <p className="section-equipe-benevoles__nom">{m.nom}</p>
+                  <p className="section-equipe-benevoles__poste">{m.poste}</p>
                 </div>
               </div>
-            </div>
-            <div className="section-equipe-benevoles__info">
-              <p className="section-equipe-benevoles__nom">{m.nom}</p>
-              <p className="section-equipe-benevoles__poste">{m.poste}</p>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
+        <button
+          type="button"
+          className="section-equipe-benevoles__btn section-equipe-benevoles__btn--next"
+          onClick={goNext}
+          aria-label="Équipe suivante"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M9 18l6-6-6-6" /></svg>
+        </button>
       </div>
+      {totalPages > 1 && (
+        <div className="section-equipe-benevoles__dots" role="tablist" aria-label="Pages équipe">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i}
+              type="button"
+              role="tab"
+              aria-selected={page === i ? "true" : "false"}
+              aria-label={`Page ${i + 1}`}
+              className="section-equipe-benevoles__dot"
+              data-active={page === i}
+              onClick={() => setPage(i)}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

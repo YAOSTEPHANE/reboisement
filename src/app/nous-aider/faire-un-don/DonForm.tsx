@@ -18,10 +18,10 @@ export function DonForm() {
   const [pending, setPending] = useState(false);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const [mode, setMode] = useState<DonMode>("online");
-  const [selectedAmount, setSelectedAmount] = useState("");
-  const [otherAmount, setOtherAmount] = useState("");
-  const [onlineEmail, setOnlineEmail] = useState("");
-  const [onlineName, setOnlineName] = useState("");
+  const [selectedAmount, setSelectedAmount] = useState<string>("");
+  const [otherAmount, setOtherAmount] = useState<string>("");
+  const [onlineEmail, setOnlineEmail] = useState<string>("");
+  const [onlineName, setOnlineName] = useState<string>("");
 
   function getAmountFcfa(): number | null {
     if (selectedAmount === "other") {
@@ -149,7 +149,7 @@ export function DonForm() {
                     type="radio"
                     name="amount"
                     value={a.value}
-                    checked={selectedAmount === a.value}
+                    checked={(selectedAmount ?? "") === a.value}
                     onChange={() => setSelectedAmount(a.value)}
                   />
                   <span>{a.label}</span>
@@ -161,7 +161,7 @@ export function DonForm() {
               <input
                 type="text"
                 placeholder="Ex. 15 000"
-                value={otherAmount}
+                value={otherAmount ?? ""}
                 onChange={(e) => setOtherAmount(e.target.value)}
                 disabled={selectedAmount !== "other"}
               />
@@ -172,8 +172,8 @@ export function DonForm() {
             <input
               type="email"
               placeholder="votre@email.com"
-              value={onlineEmail}
-              onChange={(e) => setOnlineEmail(e.target.value)}
+              value={typeof onlineEmail === "string" ? onlineEmail : ""}
+              onChange={(e) => setOnlineEmail(e.target.value ?? "")}
             />
           </label>
           <label>
@@ -181,8 +181,8 @@ export function DonForm() {
             <input
               type="text"
               placeholder="Votre nom"
-              value={onlineName}
-              onChange={(e) => setOnlineName(e.target.value)}
+              value={typeof onlineName === "string" ? onlineName : ""}
+              onChange={(e) => setOnlineName(e.target.value ?? "")}
             />
           </label>
           <button type="submit" disabled={pending} className="don-pay-button">
@@ -216,7 +216,7 @@ export function DonForm() {
                     name="amount"
                     value={a.value}
                     required
-                    checked={selectedAmount === a.value}
+                    checked={(selectedAmount ?? "") === a.value}
                     onChange={() => setSelectedAmount(a.value)}
                   />
                   <span>{a.label}</span>
@@ -229,7 +229,7 @@ export function DonForm() {
                 type="text"
                 name="amount_custom"
                 placeholder="Ex. 15 000"
-                value={otherAmount}
+                value={otherAmount ?? ""}
                 onChange={(e) => setOtherAmount(e.target.value)}
                 disabled={selectedAmount !== "other"}
               />

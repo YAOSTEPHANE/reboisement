@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 import { DonForm } from "./DonForm";
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   description: "Soutenez nos projets par un don en ligne ou par virement.",
 };
 
-const HERO_IMG = "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1600&q=80";
+const HERO_IMG = "/images/yesfondation-org/Untitled-design-7.jpg";
 
 export default function FaireUnDonPage() {
   return (
@@ -139,6 +140,7 @@ export default function FaireUnDonPage() {
 
       <SectionDecouvrirAussi />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }

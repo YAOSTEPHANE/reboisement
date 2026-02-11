@@ -4,6 +4,7 @@ import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { SectionDecouvrirAussi } from "@/components/SectionDecouvrirAussi";
 import { NewsletterSection } from "@/components/NewsletterSection";
+import { SectionApresNewsletter } from "@/components/SectionApresNewsletter";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
@@ -11,8 +12,8 @@ export const metadata: Metadata = {
   description: "Contactez la Fondation YES par email, téléphone ou formulaire.",
 };
 
-const HERO_IMAGE = "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80";
-const SIDE_IMAGE = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80";
+const HERO_IMAGE = "/images/yesfondation-org/H5C4207-scaled.jpg";
+const SIDE_IMAGE = "/images/yesfondation-org/H5C4207-scaled.jpg";
 
 export default function ContactPage() {
   return (
@@ -84,6 +85,7 @@ export default function ContactPage() {
 
       <SectionDecouvrirAussi />
       <NewsletterSection />
+      <SectionApresNewsletter />
     </>
   );
 }
